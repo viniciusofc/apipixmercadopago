@@ -27,7 +27,7 @@ function App() {
   const [responsePayment, setResponsePayment] = useState(false)
   const [linkBuyMercadoPago, setLinkBuyMercadoPago] = useState(false)
   const [statusPayment, setStatusPayment] = useState(false)
-  const [verify, setVerify] = useState(true)
+  const [verify, setVerify] = useState()
   const [id, setId] = useState()
 
 
@@ -56,6 +56,7 @@ function App() {
   }
 
   if (verify) {
+    console.log('entrei aqui')
     var intervalId = setInterval(getStatusPayment, 30 * 1000);
   }
 
@@ -63,6 +64,7 @@ function App() {
 
   const handleSubmit = (event) => {
     event.preventDefault()
+    setVerify(true)
 
     // console.log({ formData }.formData.nome)
 
