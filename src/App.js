@@ -8,7 +8,7 @@ const api = axios.create({
 
 
 api.interceptors.request.use(async config => {
-  const token = 'APP_USR-631015051868223-070413-2bcf4779b6051ea38d36349526597c32-320609239'
+  const token = ''
   config.headers.Authorization = `Bearer ${token}`
 
   return config
@@ -56,7 +56,6 @@ function App() {
   }
 
   if (verify) {
-    console.log('entrei aqui')
     var intervalId = setInterval(getStatusPayment, 30 * 1000);
   }
 
@@ -73,12 +72,12 @@ function App() {
       "description": "BEATS SOLO 3 SEM FIO - PRETO",
       "payment_method_id": "pix",
       "payer": {
-        "email": "vplayreix@gmail.com",
+        "email": "vinicius@gmail.com",
         "first_name": "Vinicius",
         "last_name": "Reis",
         "identification": {
           "type": "CPF",
-          "number": "98261738787"
+          "number": "00000000000"
         }
       }
     });
